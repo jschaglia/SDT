@@ -25,7 +25,7 @@ public class Main {
         System.out.println(java.util.Arrays.toString(numbers));
 
            // Create array with random numbers
-        int size = 10;
+        int size = 5;
         int[] numbers2 = new int[size];
         Random random = new Random();
 
