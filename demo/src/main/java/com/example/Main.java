@@ -35,17 +35,40 @@ public class Main {
 
         // Sort the array
         Arrays.sort(numbers2);
-
-        // Print sorted array
-        System.out.println("\n=== Sorted array (ascending) ===");
+        // Print original array
+        System.out.println("===  Original array ===");
         System.out.println(Arrays.toString(numbers2));
 
-        // Print sorted array in descending order
-        System.out.println("\n=== Sorted array (descending) ===");
-        for (int i = numbers.length - 1; i >= 0; i--) {
-            System.out.print(numbers2[i]);
-            if (i > 0) System.out.print(", ");
+        bubbleSort(numbers2);
+        System.out.println("\nSorted array");
+        printArray(numbers2);
+    }
+
+    static void bubbleSort(int[] arr) {
+        int n = arr.length;
+
+        for (int i = 0; i < n - 1; i++) {
+            boolean swapped = false;
+
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    // Swap elements
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+
+            // Print each pass to visualize the process
+            System.out.println("Pass " + (i + 1) + ": " + java.util.Arrays.toString(arr));
+
+            // If no swaps occurred, array is already sorted
+            if (!swapped) break;
         }
-        System.out.println();
+    }
+
+    static void printArray(int[] arr) {
+        System.out.println(java.util.Arrays.toString(arr));
     }
 }
