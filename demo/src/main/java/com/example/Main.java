@@ -1,5 +1,8 @@
 package com.example;
 
+import java.util.Arrays;
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
         // Declare and initialize an array
@@ -20,5 +23,33 @@ public class Main {
         // Print using Arrays.toString()
         System.out.println("\n=== Arrays.toString() ===");
         System.out.println(java.util.Arrays.toString(numbers));
+
+           // Create array with random numbers
+        int size = 10;
+        int[] numbers2 = new int[size];
+        Random random = new Random();
+
+        for (int i = 0; i < size; i++) {
+            numbers2[i] = random.nextInt(100); // random numbers between 0 and 99
+        }
+
+        // Print original array
+        System.out.println("=== Original array ===");
+        System.out.println(Arrays.toString(numbers2));
+
+        // Sort the array
+        Arrays.sort(numbers2);
+
+        // Print sorted array
+        System.out.println("\n=== Sorted array (ascending) ===");
+        System.out.println(Arrays.toString(numbers2));
+
+        // Print sorted array in descending order
+        System.out.println("\n=== Sorted array (descending) ===");
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            System.out.print(numbers2[i]);
+            if (i > 0) System.out.print(", ");
+        }
+        System.out.println();
     }
 }
