@@ -36,7 +36,9 @@ public class Main {
         // Sort the array
         Arrays.sort(numbers2);
 
-
+        // Print sorted array
+        System.out.println("\n=== Sorted array (ascending) ===");
+        System.out.println(Arrays.toString(numbers2));
 
         // Print sorted array in descending order
         System.out.println("\n=== Sorted array (descending) ===");
