@@ -33,10 +33,6 @@ public class Main {
             numbers2[i] = random.nextInt(100); // random numbers between 0 and 99
         }
 
-        // Print original array
-        System.out.println("=== Original array ===");
-        System.out.println(Arrays.toString(numbers2));
-
         // Sort the array
         Arrays.sort(numbers2);
 
